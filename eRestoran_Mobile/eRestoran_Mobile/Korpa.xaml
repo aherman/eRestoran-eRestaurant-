@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="eRestoran_Mobile.Korpa"
+             Title="eRestoran :: Korpa">
+
+
+    <ScrollView>
+        <StackLayout>
+
+            <StackLayout Margin="15,15,15,15">
+                <ScrollView>
+                    <ListView x:Name="artikliList" HasUnevenRows="True" HeightRequest="160">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Grid>
+                                        <StackLayout HeightRequest="35" Grid.Row="0">
+                                            <Grid Padding="5" BackgroundColor="#f3f3f3">
+                                                <Label VerticalTextAlignment="Center" Text="{Binding kolicina, StringFormat='{0:0}x'}"></Label>
+                                                <Label VerticalTextAlignment="Center" Grid.Column="1" Grid.ColumnSpan="7" Text="{Binding naziv}" ></Label>
+                                                <Image x:Name="minusArtikl" Grid.Column="8" WidthRequest="30" HeightRequest="30" Source="minus.png" Aspect="AspectFit">
+                                                    <Image.GestureRecognizers>
+                                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" CommandParameter="{Binding stavkaId}"></TapGestureRecognizer>
+                                                    </Image.GestureRecognizers>
+                                                </Image>
+                                                <Image x:Name="plusArtikl" Grid.Column="9"  WidthRequest="30" HeightRequest="30" Source="plus.png" Aspect="AspectFit">
+                                                    <Image.GestureRecognizers>
+                                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1" CommandParameter="{Binding stavkaId}"></TapGestureRecognizer>
+                                                    </Image.GestureRecognizers>
+                                                </Image>
+                                            </Grid>
+                                        </StackLayout>
+
+                                        <StackLayout HorizontalOptions="FillAndExpand" Grid.Row="1" HeightRequest="25" Padding="5" Orientation="Horizontal">
+                                            <Grid>
+                                                <Label Grid.Column="0" VerticalTextAlignment="Center" Text="CIJENA" FontAttributes="Bold"></Label>
+                                                <Label Grid.Column="1" HorizontalTextAlignment="End" VerticalTextAlignment="Center" Text="{Binding ukupnaCijena, StringFormat='{0:0.##} KM'}" FontAttributes="Bold"></Label>
+                                            </Grid>
+                                        </StackLayout>
+                                    </Grid>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </ScrollView>
+                <StackLayout VerticalOptions="Start" Padding="10" HorizontalOptions="FillAndExpand" BackgroundColor="#3c3c3c">
+                    <Grid>
+                        <Label TextColor="#e7e7e7" Text="UKUPNO:" FontAttributes="Bold" />
+                        <Label TextColor="#e7e7e7" x:Name="lblUkupno" FontAttributes="Bold" Grid.Column="1" HorizontalTextAlignment="End" />
+                    </Grid>
+                </StackLayout>
+
+                <StackLayout x:Name="dioZaPopust" VerticalOptions="Start" Padding="10" HorizontalOptions="FillAndExpand" BackgroundColor="#4c0c0c">
+                    <Grid>
+                        <Label TextColor="#e7e7e7" Text="UKUPNO: (sa popustom)" FontAttributes="Bold" />
+                        <Label TextColor="#e7e7e7" x:Name="lblUkupnoPopust" FontAttributes="Bold" Grid.Column="1" HorizontalTextAlignment="End" />
+                    </Grid>
+                </StackLayout>
+
+                <Label HorizontalTextAlignment="Center" Margin="0,20,0,20" VerticalTextAlignment="Center" Text="LOKACIJA" FontSize="Large"></Label>
+
+                <StackLayout HorizontalOptions="FillAndExpand">
+                    <Grid>
+                        <Label FontSize="Medium" VerticalTextAlignment="Center" Text="Kućna adresa:"></Label>
+                        <Switch x:Name="adresaSwitch" Toggled="Switch_Toggled"  Grid.Column="1"></Switch>
+                        <StackLayout Grid.Row="1" Grid.ColumnSpan="2">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="3*"></ColumnDefinition>
+                                    <ColumnDefinition Width="7*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Label FontSize="Medium" VerticalTextAlignment="Center" Text="Adresa:"></Label>
+                                <Entry Grid.Column="1" x:Name="adresa" Placeholder="Unesite adresu..." HorizontalOptions="EndAndExpand" WidthRequest="280"></Entry>
+                            </Grid>
+                        </StackLayout>
+                        <Label FontSize="Medium" VerticalTextAlignment="Center"  Grid.Row="2" Text="Prioritetna dostava:"></Label>
+                        <Switch x:Name="prioritetnaDostava" Grid.Row="2" Grid.Column="1"></Switch>
+                    </Grid>
+                </StackLayout>
+
+                <Label HorizontalTextAlignment="Center" Margin="0,20,0,20" VerticalTextAlignment="Center" Text="PLAĆANJE" FontSize="Large"></Label>
+
+                <StackLayout HorizontalOptions="FillAndExpand">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="4*"></ColumnDefinition>
+                            <ColumnDefinition Width="6*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Label FontSize="Medium" VerticalTextAlignment="Center" Text="Način dostave:"></Label>
+                        <Picker x:Name="nacinPlacanja" Title="Odaberite način plaćanja" Grid.Column="1" SelectedIndexChanged="Picker_SelectedIndexChanged">
+                            <Picker.Items>
+                                <x:String>Gotovina</x:String>
+                                <x:String>Plaćanje karticom</x:String>
+                            </Picker.Items>
+                        </Picker>
+                    </Grid>
+                </StackLayout>
+
+                <!--dio za placanje karticom-->
+                <StackLayout HorizontalOptions="FillAndExpand" x:Name="placanjeKarticom">
+                    <Grid>
+                        <Label FontSize="Medium" VerticalTextAlignment="Center" Text="Ime i prezime vlasnika kartice:" Grid.ColumnSpan="2"></Label>
+                        <Entry Grid.Row="1" Grid.Column="0" x:Name="karticaIme" Placeholder="Ime" HorizontalOptions="FillAndExpand"></Entry>
+                        <Entry Grid.Row="1" Grid.Column="1" x:Name="karticaPrezime" Placeholder="Prezime" HorizontalOptions="FillAndExpand"></Entry>
+                        <Label Grid.Row="2" FontSize="Medium" VerticalTextAlignment="Center" Text="Broj kartice:" Grid.ColumnSpan="2"></Label>
+                        <Entry Grid.Row="3" Grid.ColumnSpan="2" x:Name="karticaBroj" Placeholder="Broj kartice" HorizontalOptions="FillAndExpand"></Entry>
+                        <Label Grid.Row="4" FontSize="Medium" VerticalTextAlignment="Center" Text="Datum isteka:" Grid.ColumnSpan="2"></Label>
+                        <StackLayout Grid.Row="5" Grid.ColumnSpan="2">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="9*"></ColumnDefinition>
+                                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                                    <ColumnDefinition Width="9*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Picker x:Name="karticaIstekMjesec" Title="Mjesec" HorizontalOptions="FillAndExpand"></Picker>
+                                <Label FontSize="Large" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="/" Grid.Column="1"></Label>
+                                <Picker x:Name="karticaIstekGodina" Grid.Column="2" Title="Godina" HorizontalOptions="FillAndExpand"></Picker>
+                            </Grid>
+                        </StackLayout>
+                        <Label Grid.Row="6" FontSize="Medium" VerticalTextAlignment="Center" Text="Sigurnosni kod:" Grid.ColumnSpan="2"></Label>
+                        <Entry Grid.Row="7" Grid.ColumnSpan="2" x:Name="karticaSigurnosniKod" Placeholder="Sigurnosni kod" HorizontalOptions="FillAndExpand"></Entry>
+                    </Grid>
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" VerticalOptions="End">
+                <Button x:Name="posaljiNarudzbu" Text="POŠALJI NARUDŽBU" Clicked="posaljiNarudzbu_Clicked"  BackgroundColor="Gray"
+                        TextColor="Snow" HorizontalOptions="FillAndExpand"
+                        ></Button>
+            </StackLayout>
+            <StackLayout x:Name="editBrisiPart" IsVisible="False" Orientation="Horizontal" VerticalOptions="End">
+                <Button x:Name="brisiNarudzbu" Text="OBRIŠI NARUDŽBU" Clicked="BrisiNarudzbu_Clicked"  BackgroundColor="Red"
+                        TextColor="Snow" HorizontalOptions="FillAndExpand"
+                        ></Button>
+            </StackLayout>
+        </StackLayout>
+        
+    </ScrollView>
+</ContentPage>

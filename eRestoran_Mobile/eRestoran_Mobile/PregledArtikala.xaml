@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="eRestoran_Mobile.PregledArtikala"
+             Title="eRestoran :: Pregled artikala"
+             xmlns:local="clr-namespace:eRestoran_Mobile">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:ImageHelper x:Key="imgConv"></local:ImageHelper>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout>
+        <ScrollView>
+            <StackLayout>
+                <Entry x:Name="pretragaInput" Placeholder="Pretraži artikle" TextChanged="pretragaInput_TextChanged"></Entry>
+                <ListView HeightRequest="600" x:Name="artikliList" BackgroundColor="LightGray" ItemTapped="artikliList_ItemTapped">
+                    <ListView.GroupHeaderTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Label Text="{Binding Heading}" FontAttributes="Bold" VerticalTextAlignment="Center" Margin="2.5" BackgroundColor="#d3d3d3"/>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.GroupHeaderTemplate>
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" Padding="2.5" BackgroundColor="#f3f3f3">
+                                    <Image Source="{Binding SlikaThumb, Converter={StaticResource imgConv}}" Aspect="AspectFit"></Image>
+                                    <StackLayout Orientation="Vertical">
+                                        <Label Text="{Binding Naziv}" FontAttributes="Bold" FontSize="14"/>
+                                        <Label Text="{Binding Opis}" FontSize="12"></Label>
+                                    </StackLayout>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+            
+        </ScrollView>
+
+    </StackLayout>
+</ContentPage>

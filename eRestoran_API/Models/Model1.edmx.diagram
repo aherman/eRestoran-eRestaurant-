@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="44c938ece76f48b297bbad939bdaac58" Name="Diagram1">
+        <EntityTypeShape EntityType="eRestoran150002Model.Dostave" Width="1.5" PointX="8.25" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="eRestoran150002Model.Klijenti" Width="1.5" PointX="0.75" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="eRestoran150002Model.KreditneKartice" Width="1.5" PointX="3" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="eRestoran150002Model.Narudzbe" Width="1.5" PointX="6" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="eRestoran150002Model.NarudzbeStavke" Width="1.5" PointX="11.25" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="eRestoran150002Model.Ocjene" Width="1.5" PointX="3" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="eRestoran150002Model.Popusti" Width="1.5" PointX="13.5" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="eRestoran150002Model.StavkeMenija" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="eRestoran150002Model.TipoviStavke" Width="1.5" PointX="1.5" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="eRestoran150002Model.Uloge" Width="1.5" PointX="3.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="eRestoran150002Model.Zaposlenici" Width="1.5" PointX="3.75" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="eRestoran150002Model.ZaposleniciUloge" Width="1.5" PointX="6" PointY="10.625" IsExpanded="true" />
+        <AssociationConnector Association="eRestoran150002Model.fk_Dostave_NarudzbaID" ManuallyRouted="false" />
+        <AssociationConnector Association="eRestoran150002Model.fk_Dostave_ZaposlenikID" ManuallyRouted="false" />
+        <AssociationConnector Association="eRestoran150002Model.fk_KreditneKartice_KlijentID" ManuallyRouted="false" />
+        <AssociationConnector Association="eRestoran150002Model.fk_Narudzbe_KlijentID" ManuallyRouted="false" />
+        <AssociationConnector Association="eRestoran150002Model.fk_Ocjene_KlijentID" ManuallyRouted="false" />
+        <AssociationConnector Association="eRestoran150002Model.fk_Narudzbe_ZaposlenikID" ManuallyRouted="false" />
+        <AssociationConnector Association="eRestoran150002Model.fk_NarudzbeStavke_NarudzbaID" ManuallyRouted="false" />
+        <AssociationConnector Association="eRestoran150002Model.fk_NarudzbeStavke_StavkaMenijaID" ManuallyRouted="false" />
+        <AssociationConnector Association="eRestoran150002Model.fk_Ocjene_StavkaMenijaID" ManuallyRouted="false" />
+        <AssociationConnector Association="eRestoran150002Model.fk_StavkeMenija_TipStavkeID" ManuallyRouted="false" />
+        <AssociationConnector Association="eRestoran150002Model.fk_ZaposleniciUloge_UlogaID" ManuallyRouted="false" />
+        <AssociationConnector Association="eRestoran150002Model.fk_ZaposleniciUloge_ZaposlenikID" ManuallyRouted="false" />
+        <AssociationConnector Association="eRestoran150002Model.PopustiStavke" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

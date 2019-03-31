@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="eRestoran_Mobile.PrethodneNarudzbe"
+             Title="eRestoran :: Prethodne narudžbe">
+    <ScrollView>
+        <Grid RowSpacing="10">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <StackLayout Orientation="Horizontal" Padding="20" Grid.ColumnSpan="2">
+            <Label FontSize="20" Text="Prethodne narudžbe" HorizontalOptions="StartAndExpand"></Label>
+            <Label x:Name="PrethodneNarudzbeCount" FontSize="20" HorizontalOptions="End" HorizontalTextAlignment="End"></Label>
+        </StackLayout>
+
+        
+            <ListView x:Name="lista" IsGroupingEnabled="True" 
+                HasUnevenRows="True" GroupDisplayBinding="{Binding datum, StringFormat='{0:dd.MM.yyyy hh:mm}'}"
+                              Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="10">
+                <ListView.GroupHeaderTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout BackgroundColor="#d3d3d3" Padding="10">
+                                <Label FontSize="Medium" Text="{Binding datum, StringFormat='{0:dd.MM.yyyy hh:mm}'}" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.GroupHeaderTemplate>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Padding="15" BackgroundColor="#f3f3f3">
+                                <Label Text="{Binding kolicina, StringFormat='{0:0}x'}"></Label>
+                                <Label Grid.Column="1" Grid.ColumnSpan="8" Text="{Binding naziv}" ></Label>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+     
+        </Grid>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="eRestoran_Mobile.Menu"
+             xmlns:pages="clr-namespace:eRestoran_Mobile"
+                  NavigationPage.HasNavigationBar="False"
+                  IsPresented="False">
+    <MasterDetailPage.Master>
+    </MasterDetailPage.Master>
+  <MasterDetailPage.Detail>
+    <NavigationPage>
+      <!--<x:Arguments>
+        <pages:PregledArtikala />
+        <pages:PrethodneNarudzbe />
+        <pages:TrenutneNarudzbe />
+      </x:Arguments>-->
+    </NavigationPage>
+  </MasterDetailPage.Detail>
+</MasterDetailPage>

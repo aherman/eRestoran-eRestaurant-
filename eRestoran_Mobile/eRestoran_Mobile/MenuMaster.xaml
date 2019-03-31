@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="eRestoran_Mobile.MenuMaster"
+             BackgroundColor="#f3f3f3" Title="eRestoran :: Korisnički meni" Padding="10,20,10,10"
+             >
+    <ContentPage.Content>
+
+        <StackLayout>
+            <ScrollView>
+                <StackLayout>
+                
+                    <Label x:Name="profileLabel" FontSize="Medium" Margin="15,20,15,20" Text="Moj profil"></Label>
+                    <Label x:Name="pregledLabel" FontSize="Medium" Margin="15,20,15,20" Text="Pregled artikala"></Label>
+                    <Label x:Name="korpaLabel" FontSize="Medium" Margin="15,20,15,20" Text="Korpa"></Label>
+                    <Label x:Name="trenutneLabel" FontSize="Medium" Margin="15,20,15,20" Text="Trenutne narudžbe"></Label>
+                    <Label x:Name="prethodneLabel" FontSize="Medium" Margin="15,20,15,20" Text="Prethodne narudžbe"></Label>
+                    <Label x:Name="odjavaLabel" FontSize="Medium" Margin="15,20,15,50" Text="Odjava"></Label>
+                </StackLayout>
+            </ScrollView>
+
+        </StackLayout>
+        
+        
+    </ContentPage.Content>
+</ContentPage>

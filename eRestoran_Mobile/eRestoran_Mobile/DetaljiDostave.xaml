@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="eRestoran_Mobile.DetaljiDostave">
+    <ContentPage.Content>
+        <StackLayout>
+
+                <StackLayout Orientation="Vertical" Margin="20">
+                    <ScrollView>
+                        <ListView x:Name="listaProizvoda" RowHeight="65" HeightRequest="220">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <StackLayout BackgroundColor="#f3f3f3" Margin="0,10,0,10">
+                                            <StackLayout Padding="5,15,5,10" BackgroundColor="#f3f3f3">
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                                        <ColumnDefinition Width="5*"></ColumnDefinition>
+                                                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                                                    </Grid.ColumnDefinitions>
+                                                    <Label Grid.Column="0" HorizontalTextAlignment="End" Text="{Binding kolicina, StringFormat='{0:0}x'}"></Label>
+                                                    <Label Grid.Column="1" Text="{Binding naziv}" ></Label>
+                                                    <Label Grid.Column="2" HorizontalTextAlignment="Center" FontAttributes="Bold" Text="{Binding cijena, StringFormat='{0:0} KM'}"></Label>
+                                                </Grid>
+                                            </StackLayout>
+                                        </StackLayout>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </ScrollView>
+
+                    <StackLayout Padding="15" Margin="0,10,0,5" Orientation="Horizontal"  BackgroundColor="#3c3c3c">
+                        <Label Text="UKUPNO:" FontSize="14" TextColor="#e7e7e7" FontAttributes="Bold"></Label>
+                        <Label x:Name="ukupnaCijena" FontSize="14" TextColor="#e7e7e7" HorizontalOptions="EndAndExpand" FontAttributes="Bold"></Label>
+                    </StackLayout>
+
+                    <StackLayout x:Name="dioZaPopust" IsVisible="False" Padding="10" MinimumHeightRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#4c0c0c">
+                        <Grid>
+                            <Label HorizontalOptions="StartAndExpand" FontSize="14" TextColor="#e7e7e7" Text="UKUPNO: (sa popustom)" FontAttributes="Bold" />
+                            <Label TextColor="#e7e7e7" x:Name="lblUkupnoPopust" FontSize="14" FontAttributes="Bold" Grid.Column="1" HorizontalTextAlignment="End" />
+                        </Grid>
+                    </StackLayout>
+
+                    <Label Text="LOKACIJA" HorizontalTextAlignment="Center" FontSize="20" Margin="0,30,0,20"></Label>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Label HorizontalOptions="EndAndExpand" VerticalTextAlignment="Center" FontSize="16" Text="Adresa:" Margin="0,0,20,0"></Label>
+                    <Entry HorizontalOptions="StartAndExpand" x:Name="adresa" IsEnabled="False" Text="Paje jovanovica" WidthRequest="250"></Entry>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                    <Label HorizontalOptions="EndAndExpand" VerticalTextAlignment="Center" FontSize="16" Text="Način plaćanja:" Margin="0,0,20,0"></Label>
+                        <Entry x:Name="nacinPlacanja" IsEnabled="False" Text="Gotovina" HorizontalOptions="StartAndExpand" WidthRequest="195"></Entry>
+                    </StackLayout>
+
+                <Button x:Name="btnDetaljiKartice" IsVisible="False" Text="Prikaži detalje kartice" Clicked="BtnDetaljiKartice_Clicked" HorizontalOptions="CenterAndExpand"></Button>
+
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" VerticalOptions="End">
+                    <Button x:Name="ZavrsiDostavu" Text="ZAVRŠI DOSTAVU" BackgroundColor="Gray"
+                        TextColor="Snow" Clicked="ZavrsiDostavu_Clicked"  HorizontalOptions="FillAndExpand" Grid.Row="0"></Button>
+                </StackLayout>
+
+
+            </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

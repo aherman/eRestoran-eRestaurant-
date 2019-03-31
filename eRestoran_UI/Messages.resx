@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="act_order_succ" xml:space="preserve">
+    <value>Uspješno ste aktivirali narudžbu.</value>
+  </data>
+  <data name="add_itemtype_succ" xml:space="preserve">
+    <value>Uspješno ste dodali kategoriju.</value>
+  </data>
+  <data name="add_item_succ" xml:space="preserve">
+    <value>Uspješno ste dodali artikal.</value>
+  </data>
+  <data name="add_usr_succ" xml:space="preserve">
+    <value>Uspješno ste dodali zaposlenika.</value>
+  </data>
+  <data name="edit_item_succ" xml:space="preserve">
+    <value>Uspješno ste uredili artikal.</value>
+  </data>
+  <data name="edit_usr_succ" xml:space="preserve">
+    <value>Uspješno ste uredili zaposlenika.</value>
+  </data>
+  <data name="login_pass_err" xml:space="preserve">
+    <value>Uneseni password je netačan.</value>
+  </data>
+  <data name="login_succ" xml:space="preserve">
+    <value>Uspješno ste se prijavili.</value>
+  </data>
+  <data name="login_usr_err" xml:space="preserve">
+    <value>Uneseni username ne postoji.</value>
+  </data>
+  <data name="pic_err" xml:space="preserve">
+    <value>Nastao je problem sa dodavanjem slike.</value>
+  </data>
+  <data name="add_client_succ" xml:space="preserve">
+    <value>Uspješno ste dodali klijenta.</value>
+  </data>
+  <data name="del_client_succ" xml:space="preserve">
+    <value>Uspješno ste obrisali klijenta.</value>
+  </data>
+  <data name="edit_client_succ" xml:space="preserve">
+    <value>Uspješno ste izmijenili klijenta.</value>
+  </data>
+  <data name="add_disc_succ" xml:space="preserve">
+    <value>Uspješno ste dodali popust.</value>
+  </data>
+  <data name="del_disc_succ" xml:space="preserve">
+    <value>Uspješno ste obrisali popust.</value>
+  </data>
+  <data name="del_itemtype_succ" xml:space="preserve">
+    <value>Uspješno ste obrisali kategoriju.</value>
+  </data>
+  <data name="del_item_succ" xml:space="preserve">
+    <value>Uspješno ste obrisali artikal.</value>
+  </data>
+  <data name="edit_disc_err" xml:space="preserve">
+    <value>Nije moguće mijenjati popust dok je aktivan.</value>
+  </data>
+  <data name="edit_disc_succ" xml:space="preserve">
+    <value>Uspješno ste izmijenili popust.</value>
+  </data>
+  <data name="edit_itemtype_succ" xml:space="preserve">
+    <value>Uspješno ste izmijenili kategoriju.</value>
+  </data>
+  <data name="info" xml:space="preserve">
+    <value>Aplikacija eRestoran je namijenjena zaposlenicima firme za online narudžbu hrane i pića.</value>
+  </data>
+  <data name="login_restricted" xml:space="preserve">
+    <value>Nemate pravo pristupa ovoj aplikaciji.</value>
+  </data>
+  <data name="email_format_err" xml:space="preserve">
+    <value>E-mail nije u ispravnom formatu.</value>
+  </data>
+  <data name="email_req" xml:space="preserve">
+    <value>E-mail je obavezan.</value>
+  </data>
+  <data name="exp_err" xml:space="preserve">
+    <value>Staž nije u ispravnom formatu. Prihvatljive vrijednosti su od 0 do 50.</value>
+  </data>
+  <data name="exp_req" xml:space="preserve">
+    <value>Staž je obavezan.</value>
+  </data>
+  <data name="gender_err" xml:space="preserve">
+    <value>Spol nije u ispravnom formatu.</value>
+  </data>
+  <data name="name_req" xml:space="preserve">
+    <value>Ime je obavezno.</value>
+  </data>
+  <data name="phnum_reg" xml:space="preserve">
+    <value>Broj telefona mora imati 9 cifara.</value>
+  </data>
+  <data name="sname_req" xml:space="preserve">
+    <value>Prezime je obavezno.</value>
+  </data>
+  <data name="user_err_length" xml:space="preserve">
+    <value>Korisničko ime mora sadržavati najmanje 3 karaktera.</value>
+  </data>
+  <data name="user_err_space" xml:space="preserve">
+    <value>Korisničko ime ne smije sadržavati prazan prostor.</value>
+  </data>
+  <data name="user_passconf_err" xml:space="preserve">
+    <value>Unesene lozinke se ne poklapaju.</value>
+  </data>
+  <data name="user_passconf_req" xml:space="preserve">
+    <value>Potvrdite lozinku.</value>
+  </data>
+  <data name="user_pass_format_err" xml:space="preserve">
+    <value>Lozinka mora sadržavati najmanje 8 karaktera.</value>
+  </data>
+  <data name="user_pass_req" xml:space="preserve">
+    <value>Lozinka je obavezna.</value>
+  </data>
+  <data name="user_req" xml:space="preserve">
+    <value>Korisničko ime je obavezno.</value>
+  </data>
+  <data name="user_role_err" xml:space="preserve">
+    <value>Morate odabrati najmanje jednu ulogu.</value>
+  </data>
+  <data name="address_req" xml:space="preserve">
+    <value>Adresa je obavezna.</value>
+  </data>
+  <data name="code_req" xml:space="preserve">
+    <value>Šifra je obavezna.</value>
+  </data>
+  <data name="date_err" xml:space="preserve">
+    <value>Datum početka ne može biti veći od datuma završetka.</value>
+  </data>
+  <data name="price_req" xml:space="preserve">
+    <value>Cijena je obavezna.</value>
+  </data>
+  <data name="title_req" xml:space="preserve">
+    <value>Naziv je obavezan.</value>
+  </data>
+  <data name="val_err" xml:space="preserve">
+    <value>Iznos mora biti u opsegu od 0 do 100, isključujući granične vrijednosti.</value>
+  </data>
+  <data name="val_req" xml:space="preserve">
+    <value>Iznos je obavezan.</value>
+  </data>
+  <data name="user_con" xml:space="preserve">
+    <value>Korisničko ime već postoji.</value>
+  </data>
+  <data name="login_denied" xml:space="preserve">
+    <value>Nemate pravo pristupa.</value>
+  </data>
+  <data name="cmb_req" xml:space="preserve">
+    <value>Odaberite stavku sa liste.</value>
+  </data>
+</root>

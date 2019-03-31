@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="eRestoran_Mobile.DetaljiArtikla"
+             Title="eRestoran :: Detalji artikla"
+             xmlns:local="clr-namespace:eRestoran_Mobile">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:ImageHelper x:Key="imgConv"></local:ImageHelper>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <ScrollView>
+            <StackLayout Padding="20">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*" />
+                            <ColumnDefinition Width="4*" />
+                            <ColumnDefinition Width="3*" />
+                        </Grid.ColumnDefinitions>
+                        <Label x:Name="nazivText" FontSize="Large" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"></Label>
+                        <Label x:Name="cijenaText" FontSize="Medium"
+                       BackgroundColor="Gray"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                        Grid.Row="0" Grid.Column="2" Grid.RowSpan="2"></Label>
+                        <Label x:Name="opisText" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"></Label>
+
+                        <Grid Grid.Row="2" Grid.RowSpan="2" Grid.ColumnSpan="3">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.Column="0"
+                               x:Name="slikaArtikla" MinimumHeightRequest="75" MinimumWidthRequest="75" Source="{Binding ., Converter={StaticResource imgConv}}" Aspect="AspectFit"></Image>
+                            <Grid Grid.Column="1">
+                                <Label Text="Količina" HorizontalTextAlignment="Center" FontSize="Large"></Label>
+                                <Grid Grid.Row="1">
+                                    <StackLayout HeightRequest="50" WidthRequest="50" Orientation="Horizontal" Grid.Column="0">
+                                        <Image x:Name="minusKolicina" Source="minus.png" HorizontalOptions="EndAndExpand" Aspect="AspectFit"></Image>
+                                    </StackLayout>
+                                    <Label x:Name="kolicina" Text="1" HorizontalOptions="CenterAndExpand" Grid.Column="1" FontSize="Large"></Label>
+                                    <StackLayout HeightRequest="50" WidthRequest="50" Orientation="Horizontal" Grid.Column="2">
+                                        <Image x:Name="plusKolicina" Source="plus.png" HorizontalOptions="StartAndExpand"  Aspect="AspectFit"></Image>
+                                    </StackLayout>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+
+                        <Label Text="Napomena" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" 
+                       HorizontalTextAlignment="Center" FontSize="Large"></Label>
+
+                        <Editor x:Name="napomenaInput"  Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3" ></Editor>
+
+                        <Label Text="Ocjena" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="3" 
+                       HorizontalTextAlignment="Center" FontSize="Large"></Label>
+                        <StackLayout HorizontalOptions="CenterAndExpand"  Orientation="Horizontal" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="3">
+                            <Image x:Name="star1" Source="star2.png" HorizontalOptions="Center" HeightRequest="40" Margin="10,0,0,0" Aspect="AspectFit"></Image>
+                            <Image x:Name="star2" Source="star2.png" HorizontalOptions="Center" HeightRequest="40" Margin="10,0,0,0" Aspect="AspectFit"></Image>
+                            <Image x:Name="star3" Source="star2.png" HorizontalOptions="Center" HeightRequest="40" Margin="10,0,0,0" Aspect="AspectFit"></Image>
+                            <Image x:Name="star4" Source="star2.png" HorizontalOptions="Center" HeightRequest="40" Margin="10,0,0,0" Aspect="AspectFit"></Image>
+                            <Image x:Name="star5" Source="star2.png" HorizontalOptions="Center" HeightRequest="40" Margin="10,0,0,0" Aspect="AspectFit"></Image>
+                        </StackLayout>
+                        <!--<Label Text="Podijeli" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="3" 
+                       HorizontalTextAlignment="Center" FontSize="Large"></Label>-->
+
+                        <!--<StackLayout HeightRequest="40" HorizontalOptions="CenterAndExpand"  Orientation="Horizontal" Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="3">
+                            <Image Margin="5,0,5,0" x:Name="facebook" Source="facebook.png" HorizontalOptions="Center"  Aspect="AspectFit"></Image>
+                            <Image Margin="5,0,5,0" x:Name="instagram" Source="instagram.png" HorizontalOptions="Center"  Aspect="AspectFit"></Image>
+                            <Image Margin="5,0,5,0" x:Name="twitter" Source="twitter.png" HorizontalOptions="Center"  Aspect="AspectFit"></Image>
+                            <Image Margin="5,0,5,0" x:Name="tumblr" Source="tumblr.png" HorizontalOptions="Center"  Aspect="AspectFit"></Image>
+                            <Image Margin="5,0,5,0" x:Name="googleplus" Source="googleplus.png" HorizontalOptions="Center"  Aspect="AspectFit"></Image>
+                        </StackLayout>-->
+
+                        <StackLayout Grid.Row="9" Grid.ColumnSpan="3">
+                            <Label x:Name="preporucenoTitle" Text="Preporučeno za Vas" HorizontalTextAlignment="Center" FontSize="Large"></Label>
+                            <Grid x:Name="preporucenoContent" HeightRequest="120" >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <StackLayout x:Name="predlozeni1" Grid.Column="0">
+                                    <Image x:Name="slikaPredlozeni1" HeightRequest="75" Source="{Binding ., Converter={StaticResource imgConv}}" Aspect="AspectFit"></Image>
+                                    <Label HorizontalTextAlignment="Center" x:Name="nazivPredlozeni1" FontSize="14"></Label>
+                                </StackLayout>
+                                <StackLayout x:Name="predlozeni2" Grid.Column="1">
+                                    <Image x:Name="slikaPredlozeni2" HeightRequest="75" Source="{Binding ., Converter={StaticResource imgConv}}" Aspect="AspectFit"></Image>
+                                    <Label HorizontalTextAlignment="Center" FontSize="14" x:Name="nazivPredlozeni2"></Label>
+                                </StackLayout>
+                                <StackLayout x:Name="predlozeni3" Grid.Column="2">
+                                    <Image x:Name="slikaPredlozeni3" HeightRequest="75" Source="{Binding ., Converter={StaticResource imgConv}}" Aspect="AspectFit"></Image>
+                                    <Label HorizontalTextAlignment="Center" FontSize="14" x:Name="nazivPredlozeni3"></Label>
+                                </StackLayout>
+                            </Grid>
+                        </StackLayout>
+                    </Grid>
+                </StackLayout>
+            </ScrollView>
+            
+            <StackLayout Orientation="Horizontal" VerticalOptions="End">
+                <Button x:Name="DodajUKorpu" Text="DODAJ U KORPU" Clicked="DodajUKorpu_Clicked"  BackgroundColor="Gray"
+                        TextColor="Snow" HorizontalOptions="FillAndExpand"
+                        ></Button>
+            </StackLayout>
+
+        </StackLayout>
+            
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="eRestoran_Mobile.Login">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand" Margin="20">
+            <Label Text="eRestoran::Login"
+                   HorizontalTextAlignment="Center"
+                   Margin="0,0,0,60"
+                   FontSize="24">
+            </Label>
+            <Entry Placeholder="Korisničko ime..." HorizontalTextAlignment="Center" x:Name="usernameInput"></Entry>
+            <Entry Placeholder="Lozinka..." HorizontalTextAlignment="Center" IsPassword="True" x:Name="passwordInput"></Entry>
+            <Button Text="Login" Clicked="Button_Clicked_2"></Button>
+            <Button Text="Registracija" Clicked="Button_Clicked_1"></Button>
+
+            <Picker x:Name="testPicker" Margin="0,50,0,0"></Picker>
+            <Button Text="Login" Clicked="Button_Clicked"></Button>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

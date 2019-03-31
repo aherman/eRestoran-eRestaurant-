@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="eRestoran_Mobile.PregledProfila"
+             Title="eRestoran :: Moj profil">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Margin="20" HorizontalOptions="Center">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text ="Ime:" Grid.Row="1" Grid.Column="0" VerticalTextAlignment="Center" FontSize = "18"></Label>
+                    <Entry x:Name="imeInput" Grid.Row="1" Grid.Column="1" ></Entry>
+                    <Label Text ="Prezime:" Grid.Row="2" VerticalTextAlignment="Center" Grid.Column="0" FontSize = "18"></Label>
+                    <Entry x:Name="prezimeInput" Grid.Row="2" Grid.Column="1" ></Entry>
+
+                    <Label Text ="Email:" Grid.Row="3" VerticalTextAlignment="Center" Grid.Column="0" FontSize = "18"></Label>
+                    <Entry x:Name="emailInput" Grid.Row="3" Grid.Column="1" ></Entry>
+
+                    <Label Text ="Lozinka:" Grid.Row="5" VerticalTextAlignment="Center" Grid.Column="0" FontSize = "18"></Label>
+                    <Entry x:Name="lozinkaInput" Grid.Row="5" Grid.Column="1" IsPassword="true" ></Entry>
+
+                    <Label Text ="Adresa:" Grid.Row="6" VerticalTextAlignment="Center" Grid.Column="0" FontSize = "18"></Label>
+                    <Entry x:Name="adresaInput" Grid.Row="6" Grid.Column="1"></Entry>
+
+                    <Label Text ="Telefon:" Grid.Row="7" VerticalTextAlignment="Center" Grid.Column="0" FontSize = "18"></Label>
+                    <Entry x:Name="telefonInput" Grid.Row="7" Grid.Column="1"></Entry>
+                    
+                    <Button x:Name="izmjenaButton" Clicked="izmjenaButton_Clicked" Text="Izmijeni" Grid.Row="10" Grid.Column="1"  
+                    BackgroundColor="#13818d" TextColor="White" HorizontalOptions="End"></Button>
+
+
+                </Grid>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
